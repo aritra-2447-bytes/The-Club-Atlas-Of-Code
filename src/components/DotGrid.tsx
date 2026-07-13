@@ -234,7 +234,7 @@ const DotGrid: React.FC<DotGridProps> = ({
           gridX: midX, gridY: Math.max(0, midY - 2),
           targetGridX: midX, targetGridY: Math.max(0, midY - 2),
           x: startClyde.x, y: startClyde.y, radius: 20, speed: 1.3,
-          dirX: -1, dirY: 0, color: '#FFB800', isGhost: true
+          dirX: -1, dirY: 0, color: '#10b981', isGhost: true
         }
       ];
       entitiesInitializedRef.current = true;
