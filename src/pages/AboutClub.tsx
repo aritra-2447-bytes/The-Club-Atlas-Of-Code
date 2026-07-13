@@ -15,7 +15,7 @@ export default function AboutClub() {
                 <div className="max-w-3xl">
 
                     <p className="font-mono text-xs uppercase tracking-[0.25em] text-[#ffb829]">
-                        04 / ABOUT
+                        02 / ABOUT
                     </p>
 
                     <h2 className="mt-4 text-5xl font-semibold tracking-[-0.05em] text-white sm:text-6xl">
