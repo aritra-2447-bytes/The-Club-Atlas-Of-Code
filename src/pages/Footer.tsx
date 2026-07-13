@@ -11,12 +11,14 @@ export default function Footer() {
 
                     {/* Center */}
                     <div className="flex justify-center">
-                        <button
-                            /*onClick={() => setOpen(true)}*/
+                        <a
+                            href="https://drive.google.com/drive/folders/1tgB5Cb-UAJyJLWL8DLNYq9M-H2dYycly?usp=drive_link"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="text-sm font-medium uppercase tracking-[0.2em] text-slate-400 transition hover:text-[#ffb829]"
                         >
-                            * Rules & Regulations
-                        </button>
+                            * Code of Conduct
+                        </a>
                     </div>
 
                     {/* Right */}
