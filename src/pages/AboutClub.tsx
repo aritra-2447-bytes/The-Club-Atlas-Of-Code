@@ -2,7 +2,13 @@ import redGhost from "../assets/red.png";
 import blueGhost from "../assets/blue.png";
 import yellowGhost from "../assets/yellow.png";
 
-export default function AboutClub() {
+// The section number is now supplied by App.tsx (based on position in the
+// numberedSections array) instead of being hardcoded here as "02".
+interface AboutClubProps {
+    number: number;
+}
+
+export default function AboutClub({ number }: AboutClubProps) {
     return (
         <section
             id="about"
@@ -14,7 +20,7 @@ export default function AboutClub() {
                 <div className="max-w-3xl">
 
                     <p className="font-mono text-xs uppercase tracking-[0.25em] text-[#ffb829]">
-                        ABOUT
+                        {String(number).padStart(2, "0")} / ABOUT
                     </p>
 
                     <h2 className="mt-4 text-5xl font-semibold tracking-[-0.05em] text-white sm:text-6xl">
