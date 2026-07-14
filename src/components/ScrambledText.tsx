@@ -29,7 +29,7 @@ const ScrambledText: React.FC<ScrambledTextProps> = ({
 
         // 1. Split text into characters
         const split = SplitText.create(rootRef.current.querySelector('p'), {
-            type: 'chars',
+            type: 'words, chars',
             charsClass: 'inline-block will-change-transform'
         });
 
@@ -76,8 +76,10 @@ const ScrambledText: React.FC<ScrambledTextProps> = ({
     return (
         <div
             ref={rootRef}
-            // Removed the clamp class completely so the passed-in className takes priority
-            className={"m-[7vw] max-w-[800px] font-mono text-[#ffb829] " + className}
+            // No hardcoded layout classes here (margin/max-width) — the caller
+            // fully controls position/size via className so it can be a flex
+            // child, absolutely positioned, or whatever the layout needs.
+            className={"font-mono text-[#ffb829] " + className}
             style={style}
         >
             <p>{children}</p>

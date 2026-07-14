@@ -35,11 +35,16 @@ export default function Header({ onMenuToggle }: HeaderProps) {
 
     return (
         /* Changed 'fixed' to 'absolute' so the layout flows with page scrolling */
-        <header className="absolute top-0 left-0 right-0 w-full z-[1001] pointer-events-none flex justify-between items-start p-10">
+        <header className="absolute top-0 left-0 right-0 w-full z-[1001] pointer-events-none flex justify-between items-start px-6 sm:px-8 pt-6">
             {/* Top Left Text Container with added left padding */}
             <div className="pointer-events-auto pl-6 md:pl-20">
                 <svg
-                    className="w-48 h-24 sm:w-64 sm:h-32 md:w-[500px] md:h-[261px]"
+                    // Fluid width via clamp() instead of jumping between fixed
+                    // breakpoint widths (w-48 -> w-64 -> w-[500px], a 244px
+                    // jump right at md). `aspect-[631/329]` matches the
+                    // viewBox ratio so height always derives from width
+                    // instead of being set independently and squishing.
+                    className="w-[clamp(12rem,10rem+20vw,500px)] h-auto aspect-[631/329]"
                     viewBox="0 0 631 329"
                     fill="none"
                 >

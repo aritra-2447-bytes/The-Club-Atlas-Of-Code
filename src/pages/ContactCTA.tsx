@@ -5,8 +5,11 @@ import yellowPacman from '../assets/yellow.png';
 import bluePacman from '../assets/blue.png';
 import {SectionHeading} from "@/components/SectionHeading.tsx";
 
+interface ContactCTAProps {
+    number: number;
+}
 
-export function ContactCTA() {
+export function ContactCTA({ number }: ContactCTAProps) {
     const [showEmail, setShowEmail] = useState(false);
     const [copied, setCopied] = useState(false);
     const emailAddress = "hello@atlasofcode.club";
@@ -27,7 +30,9 @@ export function ContactCTA() {
         <section id="contact" className="px-6 py-28 sm:px-10 lg:px-16">
             <div className="mx-auto max-w-7xl">
                 <SectionHeading
-                    eyebrow="03 / Wanna chat..." title={""}/>
+                    eyebrow={`${String(number).padStart(2, "0")}/ Wanna chat...`}
+                    title={""}
+                />
             <div className="relative mx-auto flex max-w-7xl flex-col justify-between gap-10 rounded-[2rem] bg-[#8052ff] p-8 sm:p-12 lg:flex-row lg:items-end overflow-hidden">
 
                 <div className="flex flex-col gap-4">

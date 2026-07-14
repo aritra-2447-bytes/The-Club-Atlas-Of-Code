@@ -10,6 +10,21 @@ import TextType from "@/components/TextType.tsx";
 import AboutClub from "@/pages/AboutClub.tsx";
 import Footer from "@/pages/Footer.tsx";
 
+// Any section that displays a "01/", "02/" style number goes in this array,
+// in the order it should appear. Each entry's number is now just its index
+// in this list — reorder, insert, or remove an entry and every number
+// downstream (in every section file) updates automatically. Sections that
+// don't show a number (Hero, ContactCTA, Footer) stay out of this array and
+// are rendered separately below, unaffected by numbering.
+const numberedSections: {
+    id: string;
+    Component: React.ComponentType<{ number: number }>;
+}[] = [
+    { id: "resources", Component: Resources },
+    { id: "about", Component: AboutClub },
+    { id: "contact", Component: ContactCTA },
+];
+
 function App() {
     const [isFading, setIsFading] = useState(false);
     const [showMain, setShowMain] = useState(false);
@@ -99,9 +114,11 @@ function App() {
 
                     <main className="relative z-10 w-full">
                         <Hero />
-                        <Resources />
-                        <AboutClub />
-                        <ContactCTA />
+
+                        {numberedSections.map(({ id, Component }, index) => (
+                            <Component key={id} number={index + 1} />
+                        ))}
+
                         <Footer/>
                     </main>
                 </ClickSpark>

@@ -2,7 +2,13 @@ import redGhost from "../assets/red.png";
 import blueGhost from "../assets/blue.png";
 import yellowGhost from "../assets/yellow.png";
 
-export default function AboutClub() {
+// The section number is now supplied by App.tsx (based on position in the
+// numberedSections array) instead of being hardcoded here as "02".
+interface AboutClubProps {
+    number: number;
+}
+
+export default function AboutClub({ number }: AboutClubProps) {
     return (
         <section
             id="about"
@@ -11,11 +17,10 @@ export default function AboutClub() {
             <div className="mx-auto max-w-7xl">
 
                 {/* Heading */}
-
                 <div className="max-w-3xl">
 
                     <p className="font-mono text-xs uppercase tracking-[0.25em] text-[#ffb829]">
-                        02 / ABOUT
+                        {String(number).padStart(2, "0")} / ABOUT
                     </p>
 
                     <h2 className="mt-4 text-5xl font-semibold tracking-[-0.05em] text-white sm:text-6xl">
@@ -24,7 +29,7 @@ export default function AboutClub() {
                         Guided by mentors.
                     </h2>
 
-                    <p className="mt-6 max-w-2xl leading-7 text-slate-400">
+                    <p className="mt-6 max-w-2xl leading-7 text-[#ffb829]/80">
                         Atlas of Code is the official coding club of the
                         Department of Computer Science at Ramakrishna Mission
                         Residential College, fostering competitive programming,
@@ -72,22 +77,11 @@ export default function AboutClub() {
                             />
                         ))}
                     </div>
-
                 </div>
 
                 {/* Card */}
-
                 <div
-                    className="
-                        relative
-                        overflow-hidden
-                        rounded-[2rem]
-                        border
-                        border-white/10
-                        bg-[#111720]/85
-                        p-10
-                        backdrop-blur-xl
-                    "
+                    className=" relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#111720]/85 p-10 backdrop-blur-xl"
                 >
 
                     {/* Background glow */}
@@ -100,55 +94,25 @@ export default function AboutClub() {
                     <img
                         src={redGhost}
                         alt=""
-                        className="
-                            absolute
-                            left-8
-                            bottom-8
-                            h-12
-                            w-12
-                            opacity-15
-                            pointer-events-none
-                            select-none
-                        "
+                        className=" absolute left-8 bottom-8 h-12 w-12 opacity-15 pointer-events-none select-none"
                     />
 
                     <img
                         src={yellowGhost}
                         alt=""
-                        className="
-                            absolute
-                            bottom-10
-                            left-1/2
-                            h-10
-                            w-10
-                            -translate-x-1/2
-                            opacity-10
-                            pointer-events-none
-                            select-none
-                        "
+                        className=" absolute bottom-10 left-1/2 h-10 w-10 -translate-x-1/2 opacity-10 pointer-events-none select-none"
                     />
 
                     <img
                         src={blueGhost}
                         alt=""
-                        className="
-                            absolute
-                            top-8
-                            right-8
-                            h-12
-                            w-12
-                            opacity-15
-                            pointer-events-none
-                            select-none
-                        "
+                        className=" absolute top-8 right-8 h-12 w-12 opacity-15 pointer-events-none select-none"
                     />
 
                     <div className="relative grid gap-12 lg:grid-cols-2">
 
                         {/* LEFT */}
-
                         <div>
-
                             <p className="font-mono text-xs uppercase tracking-[0.25em] text-[#ffb829]">
                                 Institution
                             </p>
@@ -160,33 +124,17 @@ export default function AboutClub() {
                             </h3>
 
                             <div
-                                className="
-                                    mt-6
-                                    inline-flex
-                                    rounded-full
-                                    border
-                                    border-[#8052ff]/40
-                                    bg-[#8052ff]/10
-                                    px-5
-                                    py-2
-                                    text-sm
-                                    font-medium
-                                    text-[#BDA5FF]
-                                "
+                                className="mt-6 inline-flex rounded-full border border-[#8052ff]/40 bg-[#8052ff]/10 px-5 py-2 text-sm font-medium text-[#BDA5FF]"
                             >
                                 Department of Computer Science
                             </div>
-
                         </div>
 
                         {/* RIGHT */}
-
                         <div className="space-y-10">
-
                             <div>
-
                                 <p className="font-mono text-xs uppercase tracking-[0.25em] text-[#ffb829]">
-                                    President
+                                    Chairperson
                                 </p>
 
                                 <h4 className="mt-3 text-3xl font-semibold text-white">
@@ -194,13 +142,11 @@ export default function AboutClub() {
                                 </h4>
 
                                 <p className="mt-2 text-slate-400">
-                                    Head of Department
+                                    Head of Department (CS)
                                 </p>
-
                             </div>
 
                             {/* Divider */}
-
                             <div className="h-px bg-gradient-to-r from-[#ffb829]/50 via-white/10 to-[#8052ff]/50" />
 
                             <div>
@@ -217,13 +163,9 @@ export default function AboutClub() {
                                 </p>
 
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
         </section>
     );

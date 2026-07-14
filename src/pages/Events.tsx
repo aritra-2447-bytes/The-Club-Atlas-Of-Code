@@ -1,12 +1,16 @@
 import { Trophy, ArrowUpRight } from 'lucide-react';
 import {SectionHeading} from '../components/SectionHeading.tsx';
 
-export function Events() {
+interface EventsProps {
+    number: number;
+}
+
+export function Events({ number }: EventsProps) {
     return (
         <section id="events" className="px-6 py-28 sm:px-10 lg:px-16">
             <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_1.1fr] lg:items-end">
                 <SectionHeading
-                    eyebrow="02 / events"
+                    eyebrow={`${String(number).padStart(2, "0")}/ events`}
                     title="Find your next arena."
                     description="Build under pressure, learn in public, and leave with a story worth shipping."
                 />

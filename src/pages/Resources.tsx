@@ -21,19 +21,23 @@ const competitive = [
 const software = [
     {
         title: "Web Development",
-        subtitle: "Coming Soon",
+        subtitle: "Coming Soon...",
     },
     {
         title: "AI / Machine Learning",
-        subtitle: "Coming Soon",
+        subtitle: "Coming Soon...",
     },
     {
         title: "Open Source",
-        subtitle: "Coming Soon",
+        subtitle: "Coming Soon...",
     },
 ];
 
-export default function Resources() {
+interface ResourcesProps {
+    number: number;
+}
+
+export default function Resources({ number }: ResourcesProps) {
     return (
         <section id="resources" className="px-6 py-28 sm:px-10 lg:px-16">
             <div className="mx-auto max-w-7xl">
@@ -41,7 +45,7 @@ export default function Resources() {
                 {/* Header Section */}
                 <div className="max-w-3xl">
                     <p className="font-mono text-xs uppercase tracking-[0.25em] text-[#ffb829]">
-                        01 / RESOURCES
+                        {String(number).padStart(2, "0")} / RESOURCES
                     </p>
                     <h2 className="mt-4 text-5xl font-semibold tracking-[-0.05em] text-white sm:text-6xl">
                         The right hint, at the right time.
@@ -58,17 +62,7 @@ export default function Resources() {
                     {/* Competitive Programming Card                           */}
                     {/* ====================================================== */}
                     <div
-                        className="
-              relative
-              overflow-hidden
-              rounded-[2rem]
-              border
-              border-white/10
-              bg-[#111720]/85
-              px-8
-              py-6
-              backdrop-blur-xl
-            "
+                        className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#111720]/85 px-8 py-6 backdrop-blur-xl"
                     >
                         {/* Ambient Background Glow */}
                         <div className="absolute -left-24 -top-24 h-72 w-72 rounded-full bg-[#ffb829]/10 blur-3xl" />
@@ -97,22 +91,7 @@ export default function Resources() {
                                         href={item.href}
                                         target="_blank"
                                         rel="noreferrer"
-                                        className="
-                      group
-                      flex
-                      items-center
-                      justify-between
-                      rounded-2xl
-                      border
-                      border-white/10
-                      bg-white/[0.02]
-                      px-6
-                      py-3.5
-                      transition-all
-                      hover:border-[#ffb829]
-                      hover:bg-[#171f2b]
-                      hover:-translate-y-0.5
-                    "
+                                        className="group flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.02] px-6 py-3.5 transition-all hover:border-[#ffb829] hover:bg-[#171f2b] hover:-translate-y-0.5"
                                     >
                                         <div>
                                             <h4 className="text-sm font-semibold text-white">
@@ -136,17 +115,7 @@ export default function Resources() {
                     {/* Software Development Card                              */}
                     {/* ====================================================== */}
                     <div
-                        className="
-              relative
-              overflow-hidden
-              rounded-[2rem]
-              border
-              border-white/10
-              bg-[#111720]/85
-              px-8
-              py-6
-              backdrop-blur-xl
-            "
+                        className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#111720]/85 px-8 py-6 backdrop-blur-xl"
                     >
                         {/* Ambient Background Glow */}
                         <div className="absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-[#8052ff]/10 blur-3xl" />
@@ -172,23 +141,7 @@ export default function Resources() {
                                 {software.map((item) => (
                                     <div
                                         key={item.title}
-                                        className="
-                      group
-                      flex
-                      items-center
-                      justify-between
-                      cursor-default
-                      rounded-2xl
-                      border
-                      border-white/10
-                      bg-white/[0.02]
-                      px-6
-                      py-3.5
-                      transition-all
-                      hover:border-[#8052ff]
-                      hover:bg-[#171f2b]
-                      hover:-translate-y-0.5
-                    "
+                                        className="group flex items-center justify-between cursor-default rounded-2xl border border-white/10 bg-white/[0.02] px-6 py-3.5 transition-all hover:border-[#8052ff] hover:bg-[#171f2b] hover:-translate-y-0.5"
                                     >
                                         <div>
                                             <h4 className="text-sm font-semibold text-white">
@@ -204,7 +157,6 @@ export default function Resources() {
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
