@@ -1,75 +1,211 @@
-# React + TypeScript + Vite
+<div align="center">
+  <img src="public/favicon.svg" alt="Atlas of Code" width="500">
+</div>
+<div align="center">
+  <h1>Atlas of Code</h1>
+  <h3><em>Where Curiosity Compiles into Creation.</em></h3>
+</div>
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Official website of the **Computer Science Club**  
+**Ramakrishna Mission Residential College (Autonomous), Narendrapur**
 
-Currently, two official plugins are available:
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+# About the Club
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Atlas of Code** is the official Computer Science Club of **Ramakrishna Mission Residential College (Autonomous), Narendrapur**. The club serves as a collaborative platform where students explore computer science beyond the classroom through innovation, technical excellence, and peer learning.
 
-## Expanding the ESLint configuration
+Guided by the philosophy of continuous learning and practical application, the club encourages members to transform curiosity into real-world solutions. Through workshops, coding sessions, projects, hackathons, and technical discussions, students gain experience in both theoretical concepts and modern software engineering practices.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+> **"Where Curiosity Compiles into Creation."**
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# Vision
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+To cultivate a community of passionate learners and innovators who leverage technology to solve meaningful problems while fostering collaboration, creativity, and technical excellence.
 
+---
+
+# Why Atlas of Code?
+
+Computer Science extends far beyond academic coursework. Modern engineers require problem-solving ability, collaboration, software engineering practices, and continuous learning.
+
+Atlas of Code bridges this gap by providing students with opportunities to:
+
+- Develop practical software engineering skills
+- Strengthen algorithmic thinking
+- Participate in competitive programming contests
+- Build impactful real-world projects
+- Collaborate through open-source development
+- Learn modern development workflows using Git and GitHub
+- Prepare for internships, research, and industry careers
+
+The club serves as an ecosystem where beginners and experienced developers learn together while contributing to meaningful technical initiatives.
+
+---
+
+# Club Wings
+
+Atlas of Code consists of two specialized wings, each focusing on a distinct aspect of computer science.
+
+## Competitive Programming Wing
+
+The Competitive Programming Wing focuses on strengthening algorithmic thinking and problem-solving skills.
+
+Activities include:
+
+- Data Structures & Algorithms
+- Competitive Programming contests
+- Codeforces, CodeChef, LeetCode practice
+- ICPC preparation
+- Problem-solving workshops
+- Interview preparation
+
+### Objective
+
+Develop logical thinking, efficiency, and analytical problem-solving abilities.
+
+---
+
+## Software Development Wing
+
+The Software Development Wing focuses on designing and building real-world applications.
+
+Activities include:
+
+- Web Development
+- Mobile Development
+- UI/UX Design
+- Artificial Intelligence & Machine Learning
+- Open Source Contributions
+- Full Stack Development
+- Cloud & DevOps fundamentals
+- Team-based software projects
+
+### Objective
+
+Transform ideas into scalable software solutions while following modern software engineering practices.
+
+---
+
+# Competitive Programming vs Software Development
+
+| Competitive Programming | Software Development |
+|--------------------------|----------------------|
+| Focuses on algorithms and optimization | Focuses on building real-world applications |
+| Individual problem solving | Collaborative development |
+| Time-constrained contests | Long-term projects |
+| Mathematical reasoning | Software engineering practices |
+| Performance and efficiency | Usability, scalability, and maintainability |
+
+Both wings complement each other, producing well-rounded computer science students capable of both solving challenging problems and developing production-quality software.
+
+---
+
+# Faculty Chairperson
+
+**Dr. Siddhartha Banerjee**  
+Head of the Department  
+Department of Computer Science  
+Ramakrishna Mission Residential College (Autonomous), Narendrapur
+
+---
+
+# Tech Stack
+
+This website is built using modern frontend technologies.
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Three.js
+- Framer Motion
+
+---
+
+# Project Structure
+
+```text
+.
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   ├── hooks/
+│   ├── styles/
+│   ├── App.tsx
+│   └── main.tsx
+├── package.json
+├── vite.config.ts
+├── tsconfig.json
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+> The project follows a component-driven architecture to ensure scalability, maintainability, and clean code organization.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Getting Started
 
+Clone the repository
+
+```bash
+git clone https://github.com/aritra-2447-bytes/The-Club-Atlas-Of-Code.git
 ```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run the development server
+
+```bash
+npm run dev
+```
+
+Build for production
+
+```bash
+npm run build
+```
+
+---
+
+# Contributing
+
+We welcome contributions from club members and collaborators.
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push your branch
+5. Open a Pull Request
+
+Please ensure that your code follows the project's coding standards and has been tested before submission.
+
+---
+
+# Acknowledgements
+
+We sincerely thank every student, contributor, designer, and developer who has dedicated their time and effort toward building Atlas of Code.
+
+Together, we continue to foster a culture of innovation, collaboration, and technical excellence.
+
+---
+
+<div align="center">
+
+### Atlas of Code
+**Where Curiosity Compiles into Creation.**
+
+Built with dedication by the members of the Computer Science Club.
+
+</div>
