@@ -35,7 +35,7 @@ export default function Header({ onMenuToggle }: HeaderProps) {
 
     return (
         /* Changed 'fixed' to 'absolute' so the layout flows with page scrolling */
-        <header className="absolute top-0 left-0 right-0 w-full z-[1001] pointer-events-none flex justify-between items-start p-10">
+        <header className="absolute top-0 left-0 right-0 w-full z-[1001] pointer-events-none flex justify-between items-start px-6 sm:px-8 pt-6">
             {/* Top Left Text Container with added left padding */}
             <div className="pointer-events-auto pl-6 md:pl-20">
                 <svg

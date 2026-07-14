@@ -27,7 +27,7 @@ export function ContactCTA() {
         <section id="contact" className="px-6 py-28 sm:px-10 lg:px-16">
             <div className="mx-auto max-w-7xl">
                 <SectionHeading
-                    eyebrow="03 / Wanna chat..." title={""}/>
+                    eyebrow="Wanna chat..." title={""}/>
             <div className="relative mx-auto flex max-w-7xl flex-col justify-between gap-10 rounded-[2rem] bg-[#8052ff] p-8 sm:p-12 lg:flex-row lg:items-end overflow-hidden">
 
                 <div className="flex flex-col gap-4">
