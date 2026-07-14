@@ -210,8 +210,11 @@ export default function AboutClub() {
                                 </p>
 
                                 <h4 className="mt-3 text-3xl font-semibold text-white">
-                                    XXXXX XXXXX
+                                    Ankush Das
                                 </h4>
+                                <p className="mt-2 text-slate-400">
+                                    2nd Year
+                                </p>
 
                             </div>
 
