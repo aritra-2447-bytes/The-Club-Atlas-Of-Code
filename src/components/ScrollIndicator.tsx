@@ -17,7 +17,11 @@ export default function ScrollIndicator() {
 
     return (
         <div
-            className={`absolute bottom-[190px] sm:bottom-8 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center gap-2 pointer-events-none transition-opacity duration-500 ${
+            // No longer absolutely positioned with a guessed "clearance" —
+            // it's now a normal flex child alongside the title in Hero.tsx,
+            // so it naturally sits beside (or wraps below) whatever height
+            // the title actually renders at.
+            className={`shrink-0 z-40 flex flex-col items-center gap-2 pointer-events-none transition-opacity duration-500 ${
                 visible ? "opacity-100" : "opacity-0"
             }`}
             aria-hidden="true"

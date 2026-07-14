@@ -33,7 +33,11 @@ const software = [
     },
 ];
 
-export default function Resources() {
+interface ResourcesProps {
+    number: number;
+}
+
+export default function Resources({ number }: ResourcesProps) {
     return (
         <section id="resources" className="px-6 py-28 sm:px-10 lg:px-16">
             <div className="mx-auto max-w-7xl">
@@ -41,7 +45,7 @@ export default function Resources() {
                 {/* Header Section */}
                 <div className="max-w-3xl">
                     <p className="font-mono text-xs uppercase tracking-[0.25em] text-[#ffb829]">
-                        RESOURCES
+                        {String(number).padStart(2, "0")} / RESOURCES
                     </p>
                     <h2 className="mt-4 text-5xl font-semibold tracking-[-0.05em] text-white sm:text-6xl">
                         The right hint, at the right time.
