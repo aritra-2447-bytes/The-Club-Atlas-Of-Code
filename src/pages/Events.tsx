@@ -6,7 +6,7 @@ export function Events() {
         <section id="events" className="px-6 py-28 sm:px-10 lg:px-16">
             <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_1.1fr] lg:items-end">
                 <SectionHeading
-                    eyebrow="02 / events"
+                    eyebrow="events"
                     title="Find your next arena."
                     description="Build under pressure, learn in public, and leave with a story worth shipping."
                 />
