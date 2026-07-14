@@ -4,7 +4,7 @@ import ScrollIndicator from "../components/ScrollIndicator.tsx";
 function Hero() {
     return (
         // Changed to transparent and relative so text aligns to this screen height section
-        <div className="relative h-screen w-full flex flex-col justify-end pb-10 sm:pb-0">
+        <div className="mb-20 relative h-screen w-full flex flex-col justify-end pb-10 sm:pb-0">
             {/*
               Title and scroll indicator are now flex siblings in one row,
               anchored to the bottom of the hero, instead of two independently
