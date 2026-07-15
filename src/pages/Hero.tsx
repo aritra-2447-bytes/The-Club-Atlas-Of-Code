@@ -3,7 +3,7 @@ import ScrollIndicator from "../components/ScrollIndicator.tsx";
 
 function Hero() {
     return (
-        <div className="relative h-screen w-full flex flex-col items-center justify-center px-6 sm:px-10 md:px-8">
+        <div className="relative h-screen w-full flex flex-col items-center justify-center px-6 sm:px-10 md:px-8 snap-start snap-always">
             {/* Main Content Wrapper */}
             <div className="z-50 flex flex-col items-center text-center gap-4 sm:gap-6">
                 {/* Logo Wrapper */}
@@ -20,7 +20,6 @@ function Hero() {
                 </div>
                 <div className="flex items-center gap-2 md:gap-4 font-bold text-3xl sm:text-5xl md:text-5xl text-[#ffb829]">
                     <span className="text-[#8052ff]">{'{ '}</span>
-
                     <ScrambledText
                         duration={12}
                         speed={0.5}

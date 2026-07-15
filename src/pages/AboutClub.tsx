@@ -25,7 +25,6 @@ interface TeamMember {
     links: TeamLink[];
 }
 
-// Ring gradient shared by every avatar on this page.
 const RING_GRADIENT =
     "conic-gradient(from 180deg, #8052ff, #ff5f87, #ffb829, #8052ff)";
 
@@ -48,29 +47,7 @@ const secretary: TeamMember = {
     ],
 };
 
-// TODO: replace `photo` with your own imported images (e.g. import from
-// "../assets/team/xyz.jpg") and fill in real names + links.
 const restOfTeam: TeamMember[] = [
-    {
-        role: "Media Co-ordinator",
-        name: "Arijit Laskar",
-        subtitle: "2nd Year",
-        photo: arijit,
-        links: [
-            { label: "GitHub", url: "https://instagram.com/example" },
-            { label: "LinkedIn", url: "https://instagram.com/example" },
-        ],
-    },
-    {
-        role: "Club Co-ordinator",
-        name: "Sam Ghosh",
-        subtitle: "2nd Year",
-        photo: sam,
-        links: [
-            { label: "GitHub", url: "https://instagram.com/example" },
-            { label: "LinkedIn", url: "https://www.linkedin.com/in/sam-ghosh-2443a33a5/" }
-        ],
-    },
     {
         role: "Event Co-ordinator",
         name: "Swarnava Bag",
@@ -81,9 +58,28 @@ const restOfTeam: TeamMember[] = [
             { label: "LinkedIn", url: "www.linkedin.com/in/swarnava-bag-24285435b" }
         ],
     },
+    {
+        role: "Media Co-ordinator",
+        name: "Arijit Laskar",
+        subtitle: "2nd Year",
+        photo: arijit,
+        links: [
+            { label: "GitHub", url: "https://github.com/itzareo2910" },
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/arijit-laskar-789686375?utm_source=share_via&utm_content=profile&utm_medium=member_android" },
+        ],
+    },
+    {
+        role: "Club Co-ordinator",
+        name: "Sam Ghosh",
+        subtitle: "2nd Year",
+        photo: sam,
+        links: [
+            { label: "GitHub", url: "https://github.com/dodo-is-hacked" },
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/sam-ghosh-2443a33a5/" }
+        ],
+    },
 ];
 
-/** Circular photo with a gradient ring. Purely decorative — no click behavior. */
 function RingAvatar({ photo, name, size }: { photo: string; name: string; size: string }) {
     return (
         <span
@@ -101,7 +97,6 @@ function RingAvatar({ photo, name, size }: { photo: string; name: string; size: 
     );
 }
 
-/** Chairperson / Secretary row — photo beside the name, sizes differ by rank. */
 function PersonRow({
     member,
     avatarSize,
@@ -150,7 +145,6 @@ function PersonRow({
     );
 }
 
-/** Bottom-row team avatar — photo on top, caption below, subtle hover, clickable. */
 function StoryAvatar({ member, onOpen }: { member: TeamMember; onOpen: () => void }) {
     return (
         <button
@@ -203,7 +197,6 @@ function RetroLinkModal({
             onClick={(e) => e.target === e.currentTarget && onClose()}
         >
             <div className="relative w-full max-w-xs overflow-hidden border-4 border-[#ffb829] bg-[#0a0e14] shadow-[0_0_0_4px_#000,0_0_50px_rgba(255,184,41,0.35)] sm:max-w-sm">
-                {/* scanlines */}
                 <div
                     className="pointer-events-none absolute inset-0 opacity-20"
                     style={{
@@ -212,7 +205,6 @@ function RetroLinkModal({
                     }}
                 />
 
-                {/* title bar */}
                 <div className="relative flex items-center justify-between border-b-4 border-[#ffb829] bg-[#ffb829] px-4 py-2">
                     <span className="font-mono text-[11px] font-bold uppercase tracking-widest text-black sm:text-xs">
                         {member.role}.exe
@@ -271,30 +263,75 @@ function RetroLinkModal({
     );
 }
 
+// Added Pacman UI for Desktop About Section
+function PacmanDecoration({ className = "" }: { className?: string }) {
+    return (
+        <div className={`flex-col items-center ${className}`}>
+            <div className="flex items-end -space-x-4">
+                <img
+                    src={redGhost}
+                    alt="Red Ghost"
+                    className="h-12 w-12 -rotate-6 drop-shadow-lg"
+                />
+                <img
+                    src={yellowGhost}
+                    alt="Yellow Ghost"
+                    className="z-10 h-12 w-12 translate-y-2 drop-shadow-lg"
+                />
+                <img
+                    src={blueGhost}
+                    alt="Blue Ghost"
+                    className="h-12 w-12 rotate-6 drop-shadow-lg"
+                />
+            </div>
+            <div className="mt-6 flex gap-3">
+                {Array.from({ length: 10 }).map((_, i) => (
+                    <div
+                        key={i}
+                        className={`h-2.5 w-2.5 rounded-full ${
+                            i % 3 === 0
+                                ? "bg-[#ff4d5a]"
+                                : i % 3 === 1
+                                ? "bg-[#ffb829]"
+                                : "bg-[#31d5ff]"
+                        } opacity-80`}
+                    />
+                ))}
+            </div>
+        </div>
+    );
+}
+
 export default function AboutClub({ number }: AboutClubProps) {
     const [selected, setSelected] = useState<TeamMember | null>(null);
 
     return (
-        <section id="about" className="px-6 py-20 sm:px-10 sm:py-24 lg:px-16 lg:py-28">
+        <section id="about" className="min-h-[100dvh] px-6 py-20 snap-start snap-always sm:px-10 sm:py-24 lg:px-16 lg:py-28">
             <div className="mx-auto max-w-7xl">
-                {/* Heading — unchanged */}
-                <div className="max-w-3xl">
-                    <p className="font-mono text-xs uppercase tracking-[0.25em] text-[#ffb829]">
-                        {String(number).padStart(2, "0")} / ABOUT
-                    </p>
+                
+                {/* Header Section with Pacman flex hand-off */}
+                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+                    <div className="max-w-3xl">
+                        <p className="font-mono text-xs uppercase tracking-[0.25em] text-[#ffb829]">
+                            {String(number).padStart(2, "0")} / ABOUT
+                        </p>
 
-                    <h2 className="mt-4 text-4xl font-semibold tracking-[-0.05em] text-white sm:text-5xl lg:text-6xl">
-                        Built by students.
-                        <br />
-                        Guided by mentors.
-                    </h2>
+                        <h2 className="mt-4 text-4xl font-semibold tracking-[-0.05em] text-white sm:text-5xl lg:text-6xl">
+                            Built by students.
+                            <br />
+                            Guided by mentors.
+                        </h2>
 
-                    <p className="mt-6 mb-12 max-w-2xl leading-7 text-[#ffb829]/80 sm:mb-16">
-                        Atlas of Code is the official coding club of the
-                        Department of Computer Science at Ramakrishna Mission
-                        Residential College, fostering competitive programming,
-                        software development, collaborative learning and innovation.
-                    </p>
+                        <p className="mt-6 mb-12 max-w-2xl leading-7 text-[#ffb829]/80 sm:mb-16">
+                            Atlas of Code is the official coding club of the
+                            Department of Computer Science at Ramakrishna Mission
+                            Residential College, fostering competitive programming,
+                            software development, collaborative learning and innovation.
+                        </p>
+                    </div>
+
+                    {/* Desktop-only Pacman UI (hidden on smaller screens) */}
+                    <PacmanDecoration className="hidden lg:flex" />
                 </div>
 
                 {/* Card */}
