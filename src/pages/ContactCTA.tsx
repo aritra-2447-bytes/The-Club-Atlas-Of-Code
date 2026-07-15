@@ -27,7 +27,7 @@ export function ContactCTA({ number }: ContactCTAProps) {
     };
 
     return (
-        <section id="contact" className="px-6 py-28 sm:px-10 lg:px-16">
+        <section id="contact" className="px-6 py-28 snap-start snap-always sm:px-10 lg:px-16">
             <div className="mx-auto max-w-7xl">
                 <SectionHeading
                     eyebrow={`${String(number).padStart(2, "0")}/ Wanna chat...`}

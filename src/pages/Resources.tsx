@@ -8,7 +8,6 @@ import dinda from "../assets/members/Arnab-Dinda.jpeg";
 import aritra from "../assets/members/Aritra-Paul.png";
 import bhunia from "../assets/members/Arnav-Bhunia.jpeg";
 
-// Same ring treatment used on the About section, kept in sync intentionally.
 const RING_GRADIENT =
     "conic-gradient(from 180deg, #8052ff, #ff5f87, #ffb829, #8052ff)";
 
@@ -25,7 +24,6 @@ interface WingPerson {
     links: WingLink[];
 }
 
-// TODO: fill in real subtitle (year/branch) and links for each person.
 const competitiveLeads: WingPerson[] = [
     {
         role: "Wing Lead",
@@ -105,7 +103,6 @@ interface ResourcesProps {
     number: number;
 }
 
-/** Small circular photo with the same gradient ring used in the About section. */
 function RingAvatar({ photo, name }: { photo: string; name: string }) {
     return (
         <span
@@ -123,7 +120,6 @@ function RingAvatar({ photo, name }: { photo: string; name: string }) {
     );
 }
 
-/** Lead + support avatar row shown under each wing's description — clickable. */
 function WingLeads({
     people,
     accent,
@@ -162,7 +158,6 @@ function WingLeads({
     );
 }
 
-/** Same retro-arcade popup used in the About section. */
 function RetroLinkModal({
     member,
     onClose,
@@ -189,7 +184,6 @@ function RetroLinkModal({
             onClick={(e) => e.target === e.currentTarget && onClose()}
         >
             <div className="relative w-full max-w-xs overflow-hidden border-4 border-[#ffb829] bg-[#0a0e14] shadow-[0_0_0_4px_#000,0_0_50px_rgba(255,184,41,0.35)] sm:max-w-sm">
-                {/* scanlines */}
                 <div
                     className="pointer-events-none absolute inset-0 opacity-20"
                     style={{
@@ -198,7 +192,6 @@ function RetroLinkModal({
                     }}
                 />
 
-                {/* title bar */}
                 <div className="relative flex items-center justify-between border-b-4 border-[#ffb829] bg-[#ffb829] px-4 py-2">
                     <span className="font-mono text-[11px] font-bold uppercase tracking-widest text-black sm:text-xs">
                         {member.role}.exe
@@ -257,17 +250,58 @@ function RetroLinkModal({
     );
 }
 
+// Extracted Pacman UI for easy reuse
+function PacmanDecoration({ className = "" }: { className?: string }) {
+    return (
+        <div className={`flex-col items-center ${className}`}>
+            <div className="flex items-end -space-x-4">
+                <img
+                    src={redGhost}
+                    alt="Red Ghost"
+                    className="h-12 w-12 -rotate-6 drop-shadow-lg"
+                />
+                <img
+                    src={yellowGhost}
+                    alt="Yellow Ghost"
+                    className="z-10 h-12 w-12 translate-y-2 drop-shadow-lg"
+                />
+                <img
+                    src={blueGhost}
+                    alt="Blue Ghost"
+                    className="h-12 w-12 rotate-6 drop-shadow-lg"
+                />
+            </div>
+            <div className="mt-6 flex gap-3">
+                {Array.from({ length: 10 }).map((_, i) => (
+                    <div
+                        key={i}
+                        className={`h-2.5 w-2.5 rounded-full ${
+                            i % 3 === 0
+                                ? "bg-[#ff4d5a]"
+                                : i % 3 === 1
+                                ? "bg-[#ffb829]"
+                                : "bg-[#31d5ff]"
+                        } opacity-80`}
+                    />
+                ))}
+            </div>
+        </div>
+    );
+}
+
 export default function Resources({ number }: ResourcesProps) {
     const [selected, setSelected] = useState<WingPerson | null>(null);
 
     return (
-        <section id="resources" className="px-6 py-28 sm:px-10 lg:px-16">
+        <section
+            id="resources"
+            className="min-h-[100dvh] snap-start snap-always px-6 py-28 sm:px-10 lg:px-16"
+        >
             <div className="mx-auto max-w-7xl">
-
-                {/* Header Section */}
+                {/* Header Section without Desktop Pacman */}
                 <div className="max-w-3xl">
                     <p className="font-mono text-xs uppercase tracking-[0.25em] text-[#ffb829]">
-                        {String(number).padStart(2, "0")} / WINGS & RESOURCEs
+                        {String(number).padStart(2, "0")} / WINGS & RESOURCES
                     </p>
                     <h2 className="mt-4 text-5xl font-semibold tracking-[-0.05em] text-white sm:text-6xl">
                         The right hint, at the right time.
@@ -279,18 +313,13 @@ export default function Resources({ number }: ResourcesProps) {
 
                 {/* Content Cards Grid */}
                 <div className="mt-16 grid gap-8 lg:grid-cols-2">
-
                     {/* ====================================================== */}
                     {/* Competitive Programming Card                           */}
                     {/* ====================================================== */}
-                    <div
-                        className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#111720]/85 px-8 py-6 backdrop-blur-xl"
-                    >
-                        {/* Ambient Background Glow */}
+                    <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#111720]/85 px-8 py-6 backdrop-blur-xl">
                         <div className="absolute -left-24 -top-24 h-72 w-72 rounded-full bg-[#ffb829]/10 blur-3xl" />
 
                         <div className="relative">
-                            {/* Card Header */}
                             <div className="flex items-center gap-4">
                                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#ffb829]/10 text-[#ffb829]">
                                     <Code2 size={24} />
@@ -305,21 +334,18 @@ export default function Resources({ number }: ResourcesProps) {
                                 </div>
                             </div>
 
-                            {/* Wing Description */}
                             <p className="mt-5 max-w-md text-sm leading-6 text-slate-400">
                                 Weekly contests, editorial breakdowns and curated
                                 problem sets that scale with you — from your first
                                 accepted submission to Div. 1 territory.
                             </p>
 
-                            {/* Wing Lead + Co-Lead */}
                             <WingLeads
                                 people={competitiveLeads}
                                 accent="#ffb829"
                                 onOpen={setSelected}
                             />
 
-                            {/* Links List */}
                             <div className="mt-6 space-y-3">
                                 {competitive.map((item) => (
                                     <a
@@ -327,7 +353,7 @@ export default function Resources({ number }: ResourcesProps) {
                                         href={item.href}
                                         target="_blank"
                                         rel="noreferrer"
-                                        className="group flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.02] px-6 py-3.5 transition-all hover:border-[#ffb829] hover:bg-[#171f2b] hover:-translate-y-0.5"
+                                        className="group flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.02] px-6 py-3.5 transition-all hover:-translate-y-0.5 hover:border-[#ffb829] hover:bg-[#171f2b]"
                                     >
                                         <div>
                                             <h4 className="text-sm font-semibold text-white">
@@ -350,14 +376,10 @@ export default function Resources({ number }: ResourcesProps) {
                     {/* ====================================================== */}
                     {/* Software Development Card                              */}
                     {/* ====================================================== */}
-                    <div
-                        className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#111720]/85 px-8 py-6 backdrop-blur-xl"
-                    >
-                        {/* Ambient Background Glow */}
+                    <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#111720]/85 px-8 py-6 backdrop-blur-xl">
                         <div className="absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-[#8052ff]/10 blur-3xl" />
 
                         <div className="relative">
-                            {/* Card Header */}
                             <div className="flex items-center gap-4">
                                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#8052ff]/10 text-[#8052ff]">
                                     <Laptop2 size={24} />
@@ -372,26 +394,23 @@ export default function Resources({ number }: ResourcesProps) {
                                 </div>
                             </div>
 
-                            {/* Wing Description */}
                             <p className="mt-5 max-w-md text-sm leading-6 text-slate-400">
                                 Hands-on tracks in web, AI/ML and open source,
                                 built around real projects instead of tutorials
                                 — ship something you can point to.
                             </p>
 
-                            {/* Wing Lead + Co-Lead */}
                             <WingLeads
                                 people={softwareLeads}
                                 accent="#8052ff"
                                 onOpen={setSelected}
                             />
 
-                            {/* Placeholders List */}
                             <div className="mt-6 space-y-3">
                                 {software.map((item) => (
                                     <div
                                         key={item.title}
-                                        className="group flex items-center justify-between cursor-default rounded-2xl border border-white/10 bg-white/[0.02] px-6 py-3.5 transition-all hover:border-[#8052ff] hover:bg-[#171f2b] hover:-translate-y-0.5"
+                                        className="group flex cursor-default items-center justify-between rounded-2xl border border-white/10 bg-white/[0.02] px-6 py-3.5 transition-all hover:-translate-y-0.5 hover:border-[#8052ff] hover:bg-[#171f2b]"
                                     >
                                         <div>
                                             <h4 className="text-sm font-semibold text-white">
@@ -409,48 +428,10 @@ export default function Resources({ number }: ResourcesProps) {
                     </div>
                 </div>
 
-                {/* Ghost Divider */}
-                <div className="mt-16 -mb-12 flex flex-col items-center">
+                {/* Mobile-only Ghost Divider (hidden on large screens) */}
+                <PacmanDecoration className="mt-16 -mb-12 flex lg:hidden" />
 
-                    <div className="flex items-end -space-x-4">
-
-                        <img
-                            src={redGhost}
-                            alt="Red Ghost"
-                            className="h-12 w-12 -rotate-6 drop-shadow-lg"
-                        />
-
-                        <img
-                            src={yellowGhost}
-                            alt="Yellow Ghost"
-                            className="h-12 w-12 translate-y-2 drop-shadow-lg z-10"
-                        />
-
-                        <img
-                            src={blueGhost}
-                            alt="Blue Ghost"
-                            className="h-12 w-12 rotate-6 drop-shadow-lg"
-                        />
-
-                    </div>
-
-                    <div className="mt-6 flex gap-3">
-                        {Array.from({ length: 10 }).map((_, i) => (
-                            <div
-                                key={i}
-                                className={`h-2.5 w-2.5 rounded-full ${
-                                    i % 3 === 0
-                                        ? "bg-[#ff4d5a]"
-                                        : i % 3 === 1
-                                        ? "bg-[#ffb829]"
-                                        : "bg-[#31d5ff]"
-                                } opacity-80`}
-                            />
-                        ))}
-                    </div>
-                </div>
-
-                </div>
+            </div>
 
             <RetroLinkModal member={selected} onClose={() => setSelected(null)} />
         </section>

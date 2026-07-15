@@ -55,7 +55,7 @@ function App() {
     };
 
     return (
-        <div className="relative min-h-screen w-screen overflow-x-hidden bg-[#0D1117]">
+        <div className="relative min-h-screen w-screen bg-[#0D1117]">
             {/* Global Custom Cursor Injection */}
             <style>{`
                 html, body, *, button, a {
