@@ -20,8 +20,6 @@ Official website of the **Computer Science Club**
 
 Guided by the philosophy of continuous learning and practical application, the club encourages members to transform curiosity into real-world solutions. Through workshops, coding sessions, projects, hackathons, and technical discussions, students gain experience in both theoretical concepts and modern software engineering practices.
 
-> **"Where Curiosity Compiles into Creation."**
-
 ---
 
 # Vision
@@ -204,7 +202,6 @@ Together, we continue to foster a culture of innovation, collaboration, and tech
 <div align="center">
 
 ### Atlas of Code
-**Where Curiosity Compiles into Creation.**
 
 Built with dedication by the members of the Computer Science Club.
 
