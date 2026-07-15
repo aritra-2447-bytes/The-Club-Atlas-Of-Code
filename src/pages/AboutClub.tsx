@@ -54,8 +54,8 @@ const restOfTeam: TeamMember[] = [
         subtitle: "2nd Year",
         photo: arijit,
         links: [
-            { label: "GitHub", url: "https://instagram.com/example" },
-            { label: "LinkedIn", url: "https://instagram.com/example" },
+            { label: "GitHub", url: "https://github.com/itzareo2910" },
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/arijit-laskar-789686375?utm_source=share_via&utm_content=profile&utm_medium=member_android" },
         ],
     },
     {
@@ -64,7 +64,7 @@ const restOfTeam: TeamMember[] = [
         subtitle: "2nd Year",
         photo: sam,
         links: [
-            { label: "GitHub", url: "https://instagram.com/example" },
+            { label: "GitHub", url: "https://github.com/dodo-is-hacked" },
             { label: "LinkedIn", url: "https://www.linkedin.com/in/sam-ghosh-2443a33a5/" }
         ],
     },
