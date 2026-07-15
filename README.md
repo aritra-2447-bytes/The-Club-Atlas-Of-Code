@@ -1,6 +1,10 @@
-# Atlas of Code
-### *Where Curiosity Compiles into Creation.*
-
+<div align="center">
+  <img src="public/favicon.svg" alt="Atlas of Code" width="500">
+</div>
+<div align="center">
+  <h1>Atlas of Code</h1>
+  <h3><em>Where Curiosity Compiles into Creation.</em></h3>
+</div>
 <div align="center">
 
 Official website of the **Computer Science Club**  
