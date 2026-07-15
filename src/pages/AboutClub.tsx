@@ -49,6 +49,16 @@ const secretary: TeamMember = {
 
 const restOfTeam: TeamMember[] = [
     {
+        role: "Event Co-ordinator",
+        name: "Swarnava Bag",
+        subtitle: "2nd Year",
+        photo: swarnava,
+        links: [
+            { label: "GitHub", url: "https://github.com/swarnavabag" },
+            { label: "LinkedIn", url: "www.linkedin.com/in/swarnava-bag-24285435b" }
+        ],
+    },
+    {
         role: "Media Co-ordinator",
         name: "Arijit Laskar",
         subtitle: "2nd Year",
@@ -66,16 +76,6 @@ const restOfTeam: TeamMember[] = [
         links: [
             { label: "GitHub", url: "https://github.com/dodo-is-hacked" },
             { label: "LinkedIn", url: "https://www.linkedin.com/in/sam-ghosh-2443a33a5/" }
-        ],
-    },
-    {
-        role: "Event Co-ordinator",
-        name: "Swarnava Bag",
-        subtitle: "2nd Year",
-        photo: swarnava,
-        links: [
-            { label: "GitHub", url: "https://github.com/swarnavabag" },
-            { label: "LinkedIn", url: "www.linkedin.com/in/swarnava-bag-24285435b" }
         ],
     },
 ];
