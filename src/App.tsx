@@ -72,7 +72,7 @@ function App() {
                 >
                     {/* 2. Place the TextType component here centered on the screen */}
                     <TextType
-                        text={["Spawning Ghosts...", "Hero is Here."]}
+                        text={["Spawning Ghosts...", "Ready for Arcade..?"]}
                         as="h1"
                         className="text-2xl md:text-4xl font-press-start font-semibold"
                         typingSpeed={40}

@@ -1,6 +1,10 @@
-# Atlas of Code
-### *Where Curiosity Compiles into Creation.*
-
+<div align="center">
+  <img src="public/favicon.svg" alt="Atlas of Code" width="500">
+</div>
+<div align="center">
+  <h1>Atlas of Code</h1>
+  <h3><em>Where Curiosity Compiles into Creation.</em></h3>
+</div>
 <div align="center">
 
 Official website of the **Computer Science Club**  
@@ -15,8 +19,6 @@ Official website of the **Computer Science Club**
 **Atlas of Code** is the official Computer Science Club of **Ramakrishna Mission Residential College (Autonomous), Narendrapur**. The club serves as a collaborative platform where students explore computer science beyond the classroom through innovation, technical excellence, and peer learning.
 
 Guided by the philosophy of continuous learning and practical application, the club encourages members to transform curiosity into real-world solutions. Through workshops, coding sessions, projects, hackathons, and technical discussions, students gain experience in both theoretical concepts and modern software engineering practices.
-
-> **"Where Curiosity Compiles into Creation."**
 
 ---
 
@@ -200,7 +202,6 @@ Together, we continue to foster a culture of innovation, collaboration, and tech
 <div align="center">
 
 ### Atlas of Code
-**Where Curiosity Compiles into Creation.**
 
 Built with dedication by the members of the Computer Science Club.
 

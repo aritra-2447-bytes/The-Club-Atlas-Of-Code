@@ -212,7 +212,7 @@ function RetroLinkModal({
                     <button
                         onClick={onClose}
                         aria-label="Close"
-                        className="font-mono text-xs font-bold text-black hover:opacity-60"
+                        className="font-mono text-xl font-bold text-black hover:opacity-60"
                     >
                         [X]
                     </button>
