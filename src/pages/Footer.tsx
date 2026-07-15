@@ -21,12 +21,21 @@ export default function Footer() {
                 {/* Right */}
                 <div className="flex items-center justify-center gap-5 text-white transition sm:justify-end">
                     <a
-                        href="https://github.com/aritra-2447-bytes/The-Club-Atlas-Of-Code"
+                        href="https://github.com/Atlas-0f-Code-RKMRC/The-Club-Atlas-0f-Code.git"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-sm transition hover:scale-110 hover:text-[#ffb829]"
                     >
                         GitHub
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/company/atlas-0f-c0de/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm transition hover:scale-110 hover:text-[#ffb829]"
+                    >
+                        LinkedIn
                     </a>
 
                     <a
