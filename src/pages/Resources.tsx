@@ -5,7 +5,7 @@ import blueGhost from "../assets/blue.png";
 import yellowGhost from "../assets/yellow.png";
 import nilavra from "../assets/members/Nilavra-Sinha.jpeg";
 import dinda from "../assets/members/Arnab-Dinda.jpeg";
-import aritra from "../assets/members/Aritra-Paul.png";
+import aritra from "../assets/members/Aritra-Paul.jpeg";
 import bhunia from "../assets/members/Arnav-Bhunia.jpeg";
 
 const RING_GRADIENT =
