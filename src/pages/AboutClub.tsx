@@ -43,7 +43,7 @@ const secretary: TeamMember = {
     subtitle: "2nd Year",
     photo: ankush,
     links: [
-        { label: "GitHub", url: "https://instagram.com/example" },
+        { label: "GitHub", url: "https://github.com/heaven-1310" },
         { label: "LinkedIn", url: "https://linkedin.com/in/example" },
     ],
 };
@@ -220,7 +220,7 @@ function RetroLinkModal({
                     <button
                         onClick={onClose}
                         aria-label="Close"
-                        className="font-mono text-xs font-bold text-black hover:opacity-60"
+                        className="font-mono text-xl font-bold text-black hover:opacity-60"
                     >
                         [X]
                     </button>

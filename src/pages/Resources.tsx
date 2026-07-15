@@ -33,7 +33,8 @@ const competitiveLeads: WingPerson[] = [
         subtitle: "Competitive Programming",
         photo: nilavra,
         links: [
-            { label: "Codeforces", url: "https://codeforces.com/profile/example" },
+            { label: "Codeforces", url: "https://codeforces.com/profile/The__Knight" },
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/skyy07" }
         ],
     },
     {
@@ -42,7 +43,8 @@ const competitiveLeads: WingPerson[] = [
         subtitle: "Competitive Programming",
         photo: dinda,
         links: [
-            { label: "Codeforces", url: "https://codeforces.com/profile/example" },
+            { label: "Codeforces", url: "https://codeforces.com/profile/Wingg_Arnab" },
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/arnab-dinda-727233371" }
         ],
     },
 ];
@@ -54,7 +56,8 @@ const softwareLeads: WingPerson[] = [
         subtitle: "Software Development",
         photo: aritra,
         links: [
-            { label: "GitHub", url: "https://github.com/example" },
+            { label: "GitHub", url: "https://github.com/aritra-2447-bytes" },
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/aritra-paul-765748301" }
         ],
     },
     {
@@ -64,6 +67,7 @@ const softwareLeads: WingPerson[] = [
         photo: bhunia,
         links: [
             { label: "GitHub", url: "https://github.com/example" },
+            { label: "LinkedIn", url: "#" }
         ],
     },
 ];
@@ -206,7 +210,7 @@ function RetroLinkModal({
                     <button
                         onClick={onClose}
                         aria-label="Close"
-                        className="font-mono text-xs font-bold text-black hover:opacity-60"
+                        className="font-mono text-xl font-bold text-black hover:opacity-60"
                     >
                         [X]
                     </button>
@@ -306,7 +310,7 @@ export default function Resources({ number }: ResourcesProps) {
                             </div>
 
                             {/* Wing Description */}
-                            <p className="mt-5 max-w-md text-sm leading-6 text-slate-400">
+                            <p className="mt-5 max-w-md text-sm leading-5 text-slate-400">
                                 Weekly contests, editorial breakdowns and curated
                                 problem sets that scale with you — from your first
                                 accepted submission to Div. 1 territory.
