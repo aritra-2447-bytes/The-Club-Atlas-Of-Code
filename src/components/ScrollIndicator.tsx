@@ -27,7 +27,7 @@ export default function ScrollIndicator() {
             aria-hidden="true"
         >
             <span className="font-press-start text-[8px] sm:text-[9px] tracking-[0.2em] text-slate-400">
-                SCROLL
+                EXPLORE
             </span>
 
             {/* Retro pixelated down-arrow, bouncing */}
