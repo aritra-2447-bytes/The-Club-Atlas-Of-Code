@@ -177,6 +177,29 @@ npm run build
 
 ---
 
+# Running a Production Release Locally
+
+If you just want to run the stable compiled application without setting up a full development environment, you can use the production build asset from our releases.
+
+### 1. Download the Release Package
+1. Head to the **Releases** page of this repository.
+2. Under **Assets**, download the pre-compiled production archive (e.g., `atlas-of-code-v5.0.0.zip`).
+3. Extract the contents of the `.zip` file onto your device.
+
+### 2. Serve the Application
+Because modern single-page apps use asset bundling and client-side routing, you need a local web server to run the project. Open your terminal, navigate *inside* the extracted `dist/` folder, and use any of the following options:
+
+#### Option A: Using Node.js (Recommended)
+If you have Node.js installed, you can use `serve` to run the directory directly:
+```bash
+npx serve .
+```
+#### Option B: Using Python
+Python 3.x:
+```bash
+python -m http.server 8000
+```
+
 # Contributing
 
 We welcome contributions from club members and collaborators.
