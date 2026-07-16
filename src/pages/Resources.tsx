@@ -64,8 +64,8 @@ const softwareLeads: WingPerson[] = [
         subtitle: "Software Development",
         photo: bhunia,
         links: [
-            { label: "GitHub", url: "https://github.com/example" },
-            { label: "LinkedIn", url: "#" }
+            { label: "GitHub", url: "https://github.com/arnav-hacked007" },
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/arnav-bhunia-2031353a4" }
         ],
     },
 ];

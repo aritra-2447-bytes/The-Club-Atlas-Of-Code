@@ -14,7 +14,7 @@ export default function Footer() {
                         rel="noopener noreferrer"
                         className="text-xs font-medium uppercase tracking-[0.2em] text-slate-400 transition hover:text-[#ffb829] sm:text-sm"
                     >
-                        * Code of Conduct
+                        Code of Conduct
                     </a>
                 </div>
 
