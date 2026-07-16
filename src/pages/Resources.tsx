@@ -295,7 +295,7 @@ export default function Resources({ number }: ResourcesProps) {
     return (
         <section
             id="resources"
-            className="min-h-[100dvh] snap-start snap-always px-6 py-28 sm:px-10 lg:px-16"
+            className="min-h-[100dvh] px-6 py-28 sm:px-10 lg:px-16"
         >
             <div className="mx-auto max-w-7xl">
                 {/* Header Section without Desktop Pacman */}
