@@ -130,13 +130,6 @@
     @apply font-sans;
   }
 
-  /* * REMOVED: overflow-x: hidden and max-width: 100vw.
-   * We will handle horizontal overflow at the App wrapper level instead.
-   */
-  html, body {
-      /* Keep empty or remove this block entirely */
-  }
-
   ::-webkit-scrollbar {
       display: none; 
   }
