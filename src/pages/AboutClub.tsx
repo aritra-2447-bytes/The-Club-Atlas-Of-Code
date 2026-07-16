@@ -43,7 +43,7 @@ const secretary: TeamMember = {
     photo: ankush,
     links: [
         { label: "GitHub", url: "https://github.com/heaven-1310" },
-        { label: "LinkedIn", url: "https://linkedin.com/in/example" },
+        { label: "LinkedIn", url: "https://www.linkedin.com/in/ankush-das-923271380" },
     ],
 };
 
@@ -55,7 +55,7 @@ const restOfTeam: TeamMember[] = [
         photo: swarnava,
         links: [
             { label: "GitHub", url: "https://github.com/swarnavabag" },
-            { label: "LinkedIn", url: "www.linkedin.com/in/swarnava-bag-24285435b" }
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/swarnava-bag-24285435b" }
         ],
     },
     {
