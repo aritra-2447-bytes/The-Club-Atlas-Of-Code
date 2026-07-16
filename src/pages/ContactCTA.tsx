@@ -12,7 +12,7 @@ interface ContactCTAProps {
 export function ContactCTA({ number }: ContactCTAProps) {
     const [showEmail, setShowEmail] = useState(false);
     const [copied, setCopied] = useState(false);
-    const emailAddress = "hello@atlasofcode.club";
+    const emailAddress = "aoc.rkmrc@gmail.com";
 
     const handleButtonClick = (e: React.MouseEvent) => {
         e.preventDefault();

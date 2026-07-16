@@ -24,6 +24,12 @@ function Hero() {
                     <span className="text-[#8052ff]">{'{'}</span> Atlas <br className="sm:hidden" /> 0f Code <span className="text-[#8052ff]">{'}'}</span>
                 </ScrambledText>
 
+                    <span className="text-[#8052ff]">{' }'}</span>
+                </div>
+            </div>
+
+            {/* Scroll Indicator */}
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 md:bottom-8">
                 <ScrollIndicator />
             </div>
         </div>
