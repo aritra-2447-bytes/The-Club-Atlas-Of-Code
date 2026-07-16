@@ -59,16 +59,6 @@ const restOfTeam: TeamMember[] = [
         ],
     },
     {
-        role: "Media Co-ordinator",
-        name: "Arijit Laskar",
-        subtitle: "2nd Year",
-        photo: arijit,
-        links: [
-            { label: "GitHub", url: "https://github.com/itzareo2910" },
-            { label: "LinkedIn", url: "https://www.linkedin.com/in/arijit-laskar-789686375?utm_source=share_via&utm_content=profile&utm_medium=member_android" },
-        ],
-    },
-    {
         role: "Club Co-ordinator",
         name: "Sam Ghosh",
         subtitle: "2nd Year",
@@ -76,6 +66,16 @@ const restOfTeam: TeamMember[] = [
         links: [
             { label: "GitHub", url: "https://github.com/dodo-is-hacked" },
             { label: "LinkedIn", url: "https://www.linkedin.com/in/sam-ghosh-2443a33a5/" }
+        ],
+    },
+    {
+        role: "Media Co-ordinator",
+        name: "Arijit Laskar",
+        subtitle: "2nd Year",
+        photo: arijit,
+        links: [
+            { label: "GitHub", url: "https://github.com/itzareo2910" },
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/arijit-laskar-789686375?utm_source=share_via&utm_content=profile&utm_medium=member_android" },
         ],
     },
 ];
@@ -306,7 +306,7 @@ export default function AboutClub({ number }: AboutClubProps) {
     const [selected, setSelected] = useState<TeamMember | null>(null);
 
     return (
-        <section id="about" className="min-h-[100dvh] px-6 py-20 snap-start snap-always sm:px-10 sm:py-24 lg:px-16 lg:py-28">
+        <section id="about" className="min-h-[100dvh] px-6 py-20 sm:px-10 sm:py-24 lg:px-16 lg:py-28">
             <div className="mx-auto max-w-7xl">
                 
                 {/* Header Section with Pacman flex hand-off */}
