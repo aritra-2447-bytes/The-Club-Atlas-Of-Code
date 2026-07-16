@@ -306,7 +306,7 @@ export default function AboutClub({ number }: AboutClubProps) {
     const [selected, setSelected] = useState<TeamMember | null>(null);
 
     return (
-        <section id="about" className="min-h-[100dvh] px-6 py-20 snap-always sm:px-10 sm:py-24 lg:px-16 lg:py-28">
+        <section id="about" className="min-h-[100dvh] px-6 py-20 sm:px-10 sm:py-24 lg:px-16 lg:py-28">
             <div className="mx-auto max-w-7xl">
                 
                 {/* Header Section with Pacman flex hand-off */}
