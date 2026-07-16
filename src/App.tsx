@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
+import {useState, useEffect} from "react";
 import Hero from "@/pages/Hero.tsx";
 import ClickSpark from "@/components/ClickSpark.tsx";
 import Header from "@/pages/Header.tsx";
 import DotGrid from "@/components/DotGrid.tsx";
 import Resources from "@/pages/Resources.tsx";
-import { ContactCTA } from "@/pages/ContactCTA.tsx";
+import {ContactCTA} from "@/pages/ContactCTA.tsx";
 // 1. Import the TextType component (adjust the path based on where you saved it)
 import TextType from "@/components/TextType.tsx";
 import AboutClub from "@/pages/AboutClub.tsx";
@@ -20,9 +20,9 @@ const numberedSections: {
     id: string;
     Component: React.ComponentType<{ number: number }>;
 }[] = [
-    { id: "resources", Component: Resources },
-    { id: "about", Component: AboutClub },
-    { id: "contact", Component: ContactCTA },
+    {id: "resources", Component: Resources},
+    {id: "about", Component: AboutClub},
+    {id: "contact", Component: ContactCTA},
 ];
 
 function App() {
@@ -58,10 +58,27 @@ function App() {
         <div className="relative min-h-screen w-screen overflow-x-hidden bg-[#0D1117]">
             {/* Global Custom Cursor Injection */}
             <style>{`
-                html, body, *, button, a {
+                    html, body, *, button, a, input, textarea, p, span, h1, h2, h3, h4, h5, h6 {
                     cursor: url('src/assets/pointinghand.svg') 16 16, auto !important;
-                }
-            `}</style>
+                    }
+    
+                    /* Force the custom cursor even when hovering over selectable text or active selections */
+                    ::selection {
+                    cursor: url('src/assets/pointinghand.svg') 16 16, auto !important;
+                    }
+    
+                    ::-moz-selection {
+                    cursor: url('src/assets/pointinghand.svg') 16 16, auto !important;
+                    }
+
+                    /* Optional: If you also want to stop users from highlighting/selecting the text entirely */
+                    body {
+                    user-select: none;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                        }
+`           }</style>
 
             {/* Loading Mask Layer */}
             {!showMain && (
@@ -94,7 +111,7 @@ function App() {
                     sparkCount={10}
                     sparkSize={12}
                 >
-                    <Header onMenuToggle={handleMenuStateChange} />
+                    <Header onMenuToggle={handleMenuStateChange}/>
 
                     <div className="fixed inset-0 z-0 pointer-events-auto">
                         <DotGrid
@@ -113,10 +130,10 @@ function App() {
                     </div>
 
                     <main className="relative z-10 w-full">
-                        <Hero />
+                        <Hero/>
 
-                        {numberedSections.map(({ id, Component }, index) => (
-                            <Component key={id} number={index + 1} />
+                        {numberedSections.map(({id, Component}, index) => (
+                            <Component key={id} number={index + 1}/>
                         ))}
 
                         <Footer/>
